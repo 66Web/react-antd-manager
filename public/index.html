@@ -23,10 +23,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+     <!--第三方库 百度地图-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=vALBxRpSKdoPxLyDcuMQPWFL8avoRTP0"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!--Loading 全局Html文件-->
+    <div class="ajax-loading" id="ajaxLoading" style="display: none;">
+      <div class="overlay"></div>
+      <div class="loading">
+          <img src="https://media.number-7.cn/ebike-h5/static/images/common/loading.gif" alt="">
+          <span>加载中，请稍后...</span>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -1,0 +1,55 @@
+@import './../style/default.less';
+@import './../style/loading.less';
+
+ul,li{
+    list-style: none;
+}
+.clearfix{
+    &::after{
+        content:'';
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+}
+.content{
+    padding: 20px
+}
+
+.container{
+    display: flex;
+    .nav-left{
+        width: 15%;
+        min-width: 180px;
+        height: calc(80vh);
+        color: #ffffff;
+        background-color: #001529;
+    }
+    .main{
+        flex: 1;
+        height: calc(100vh);
+        background-color: @colorL;
+        overflow: auto; //自动滚动
+    }
+    .content{
+        position: relative;
+        padding: 20px;
+    }
+}
+
+.content-wrap{
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    margin-top: -3px;
+    .ant-table-wrapper{
+        margin-left: -1px;
+        margin-right: -2px;
+    }
+}
+
+.operate-wrap, .permission-wrap{
+    button{
+        margin-right: 10px;
+    }
+}
+

@@ -1,0 +1,63 @@
+@import './../../style/default.less';
+
+.header{
+    background-color: @colorM;
+    .header-top{
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: right;
+        .logo{
+            line-height: 60px;
+            text-align: left;
+            font-size: 18px;
+            img{
+                height: 40px;
+                vertical-align: middle;
+            }
+            span{
+                margin-left: 5px;
+            }
+        }
+        a{
+            margin-left: 40px;
+        }
+    }
+    .breadcrumb{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-top: 1px solid #f9c700;
+        position: relative;   //父级元素相对定位
+        .breadcrumb-title{
+            font-size: @fontC;
+            text-align: center;
+            &:after{
+                position: absolute;  //绝对定位
+                content: '';    //设为空用于占位
+                left: 73px;
+                top: 39px;
+                border-top: 9px solid @colorM;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+            }
+        }
+        .weather{
+            text-align: right;
+            .date{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+//.common 页面简单头
+.simple-page{
+    .header-top{
+        background: #1890ff;
+        color: @colorM;
+    }
+    .ant-form, .ant-col-12, .weather{
+        display: none;
+    }
+}
